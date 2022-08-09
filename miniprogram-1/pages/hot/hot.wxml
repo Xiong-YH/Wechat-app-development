@@ -1,0 +1,32 @@
+<!--pages/hot/hot.wxml-->
+<view class="tabs" >
+  <view class="tab {{rankType === item.type? 'active' :''}}" bindtap="hanleTabchange"
+   data-type="{{item.type}}"  wx:for="{{rankTypes}}" wx:key="type">
+  {{item.name}}
+  <view class="active-bar" wx:if="{{rankType === item.type}}"></view>
+  </view>
+  <!-- <view class="tab {{rankType ==='path'? 'active' :''}}" bindtap="hanleTabchange" data-type="path">
+  路径排行
+  <view class="active-bar" wx:if="{{rankType ==='path'}}"></view>
+  </view> -->
+</view>
+
+<view>
+<view class="time">
+  <!-- <view class="period">周</view> -->
+  <view wx:for="{{period}}" wx:key="time" class="period {{periodtime === item.time? 'period-active' : ''}}"  bindtap="handlechangeTime" data-type="{{item.time}}">
+  {{item.title}}
+  </view>
+</view>
+</view>
+
+<view class="list">
+  <view class="item">
+  <image class="item-image" src="https://img3.mukewang.com/529dc3380001379906000338-590-330.jpg"></image>
+  <view class="item-title"><view class="item-title-inner">初识HTML(5)+CSS(3)-升级版</view></view>
+  <view class="item-number">
+  <image class="item-number-img" src="../../resources/first.png"></image>
+  </view>
+  </view>
+  
+</view>

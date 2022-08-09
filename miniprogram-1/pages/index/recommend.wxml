@@ -1,0 +1,69 @@
+<block wx:if="{{type ==='recommend'}}">
+  <swiper previous-margin="18rpx" next-margin="18rpx" class="swiper" circular="{{true}}" autoplay="{{true}}">
+  <swiper-item wx:for="{{swiperList}}" wx:key="*this" class="swiper-item">
+  <image class="swiper-img" src="{{item.imgUrl}}" alt="593"></image></swiper-item>
+  <!-- <swiper-item class="swiper-item">
+  <image class="swiper-img" src="../../resources/100.png" alt="583"></image></swiper-item>
+  <swiper-item class="swiper-item">
+  <image class="swiper-img" src="../../resources/102.png" alt="585"></image></swiper-item>
+  <swiper-item class="swiper-item">
+  <image class="swiper-img" src="../../resources/103.png" alt="585"></image></swiper-item> -->
+  </swiper>
+
+  <view class="project">
+<navigator url="../hot/hot">
+  <view class="project-title" bindtap="handleRecommendHot">实战推荐</view>
+</navigator>
+  <view class="project-empty" hidden="{{!(searchList && searchList.length === 0)}}">无搜索结果</view>
+  <view class="project-item" wx:for="{{searchList? searchList : courses}}" wx:key="*this">
+  <image class="project-item-pic" src="{{item.imgUrl}}"></image>
+  <view class="project-item-content">
+  <view class="project-item-title">{{item.title}}</view>
+  <view class="project-item-tags">
+  <view class="project-item-price-active" wx:if="{{item.promotion}}">￥{{item.price}}</view>
+  <view class="project-item-price-text" wx:if="{{!item.promotion}}">￥{{item.price}}</view>
+  <view class="project-item-notice" wx:if="{{item.notice}}">{{item.notice}}</view>
+  <view class="project-item-text">{{item.level}}</view>
+  <view class="project-item-ueser"><image class="project-item-icon" src="../../resources/user.png"></image>{{item.sales}}</view>
+  </view>
+  </view>
+  </view>
+
+  <!-- <view class="project-item">
+  <image class="project-item-pic" src="../../resources/110.png"></image>
+  <view class="project-item-content">
+  <view class="project-item-title">微信小程序入门与实战常用组件 开发技巧API 项目实战</view>
+  <view class="project-item-tags">
+  <view class="project-item-price-active">￥198</view>
+  <view class="project-item-notice">APP购买立减￥3</view>
+  <view class="project-item-text">中级</view>
+  <view class="project-item-ueser"><image class="project-item-icon" src="../../resources/user.png"></image>2892</view>
+  </view>
+  </view>
+  </view> -->
+  <!-- <view class="project-item">
+  <image class="project-item-pic" src="../../resources/110.png"></image>
+  <view class="project-item-content">
+  <view class="project-item-title">微信小程序入门与实战常用组件 开发技巧API 项目实战</view>
+  <view class="project-item-tags">
+  <view class="project-item-price-active">￥198</view>
+  <view class="project-item-notice">APP购买立减￥3</view>
+  <view class="project-item-text">中级</view>
+  <view class="project-item-ueser"><image class="project-item-icon" src="../../resources/user.png"></image>2892</view>
+  </view>
+  </view>
+  </view> -->
+  <!-- <view class="project-item">
+  <image class="project-item-pic" src="../../resources/110.png"></image>
+  <view class="project-item-content">
+  <view class="project-item-title">微信小程序入门与实战常用组件 开发技巧API 项目实战</view>
+  <view class="project-item-tags">
+  <view class="project-item-price-active">￥198</view>
+  <view class="project-item-notice">APP购买立减￥3</view>
+  <view class="project-item-text">中级</view>
+  <view class="project-item-ueser"><image class="project-item-icon" src="../../resources/user.png"></image>2892</view>
+  </view>
+  </view>
+  </view> -->
+  </view>
+</block>

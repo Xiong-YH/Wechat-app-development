@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/hot/hot",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person/person"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "慕课案例",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./resources/home.png",
+        "selectedIconPath": "./resources/home-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "购物车",
+        "iconPath": "./resources/buy1(1).png",
+        "selectedIconPath": "./resources/buy-active1(1).png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "./resources/my.png",
+        "selectedIconPath": "./resources/my-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

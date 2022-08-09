@@ -1,0 +1,6 @@
+/* pages/person/person.wxss */
+.person {
+  margin: 100rpx;
+  text-align: center;
+  color: #cccccc;
+}
