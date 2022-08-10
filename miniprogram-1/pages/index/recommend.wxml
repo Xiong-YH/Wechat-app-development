@@ -11,11 +11,12 @@
   </swiper>
 
   <view class="project">
+  <!-- 跳转至Hot -->
 <navigator url="../hot/hot">
   <view class="project-title" bindtap="handleRecommendHot">实战推荐</view>
 </navigator>
   <view class="project-empty" hidden="{{!(searchList && searchList.length === 0)}}">无搜索结果</view>
-  <view class="project-item" wx:for="{{searchList? searchList : courses}}" wx:key="*this">
+  <view class="project-item" wx:for="{{searchList? searchList : courses}}" wx:key="*this" bindtap="handleCourseTap" data-id="{{item.id}}">
   <image class="project-item-pic" src="{{item.imgUrl}}"></image>
   <view class="project-item-content">
   <view class="project-item-title">{{item.title}}</view>

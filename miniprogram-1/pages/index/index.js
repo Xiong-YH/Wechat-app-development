@@ -29,6 +29,7 @@ Page({
     //搜索出内容
     let searchList = null
     if(value){
+      //
       searchList = this.data.courses.filter(item=>item.title.indexOf(value)>-1)
       // console.log(searchList)
     };
@@ -41,6 +42,12 @@ Page({
     const type = e.currentTarget.dataset.type;
     this.setData({type})
   },
+  handleCourseTap(e) {
+    const {id} = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `../detail/detaill?id=${id}`
+    })
+  }
   // handleRecommendHot(){
   //   wx.redirectTo({
   //     url: '../hot/hot.wxml',

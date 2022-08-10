@@ -88,3 +88,12 @@
   margin-right: 48rpx;
   margin-top: 30rpx;
 }
+
+.item-number-common {
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  color: #71777d;
+  line-height: 40rpx;
+  text-align: right;
+}

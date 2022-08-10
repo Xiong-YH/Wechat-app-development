@@ -1,0 +1,2 @@
+<!--pages/detail/detaill.wxml-->
+<view class="detail">detail id is {{id}}</view>

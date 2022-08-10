@@ -21,11 +21,17 @@
 </view>
 
 <view class="list">
-  <view class="item">
-  <image class="item-image" src="https://img3.mukewang.com/529dc3380001379906000338-590-330.jpg"></image>
-  <view class="item-title"><view class="item-title-inner">初识HTML(5)+CSS(3)-升级版</view></view>
+  <view class="item" wx:for="{{currentList}}" wx:key="title">
+  <image class="item-image" src="{{item.imgUrl}}"></image>
+  <view class="item-title"><view class="item-title-inner">{{item.title}}</view></view>
   <view class="item-number">
-  <image class="item-number-img" src="../../resources/first.png"></image>
+  <image class="item-number-img" src="../../resources/first.png" 
+  wx:if="{{index === 0}}"></image>
+  <image class="item-number-img" src="../../resources/second.png" 
+  wx:elif="{{index === 1}}"></image>
+  <image class="item-number-img" src="../../resources/third.png" 
+  wx:elif="{{index === 2}}"></image>
+  <view wx:else class="item-number-common">{{index+1}}</view>
   </view>
   </view>
   
